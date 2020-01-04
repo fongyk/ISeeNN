@@ -11,7 +11,7 @@
 
 <img src="img/framework.png" align="center" />
 
-这里只使用一台服务器，不是上图的分布式架构。建议使用[conda](https://conda.io/en/latest/)配置环境。
+这里只使用一台服务器，不是上图的分布式架构。建议使用 [conda](https://conda.io/en/latest/) 配置环境。
 
 ## 设置
 
@@ -21,7 +21,7 @@
 
 #### 创建 admin 用户
 
-运行 `mongodb_first_run.sh` 。其内容如下：
+执行 `./mongodb_first_run.sh` ，其内容如下：
 
 ```bash
 USER=${MONGODB_USERNAME:-mongo}
@@ -54,7 +54,7 @@ echo "========================================================================"
 
 ```
 
-其中 `pwgen` 用于随机产生密码，这里可以直接改为自己想设置的密码。注意修改 `DBPATH` 。
+其中 `pwgen` 用于随机产生密码，这里可以直接改为自己想设置的密码；注意修改 `DBPATH` 。
 
 #### 创建 webclient 用户
 
@@ -70,7 +70,7 @@ MongoDB Role: "dbOwner"
 
 webclient 是数据库 image_retrieval 的管理员，后面索引的数据集都是放在 image_retrieval 里面。
 
-#### 开启 db.image_server.insert 服务
+#### 开启 MongoDB 服务
 
  在 `DBPATH` 下新建 `mongodb.conf` 和 `mongodb.log`，配置 `mongodb.conf` 如下：
 
@@ -128,7 +128,7 @@ pillow                    6.2.1
 scikit-image              0.16.2 
 ```
 
-开始一个django项目，名为 **CBIR**，
+建立一个 Django 项目，名为 **CBIR**，
 ```bash
 $ django-admin startproject CBIR
 $ tree CBIR
@@ -157,7 +157,7 @@ TEMPLATES = [
 TIME_ZONE = 'Asia/Shanghai'
 ```
 
-新增：
+需要新增：
 ```python
 _MONGODB_USER = 'webclient'
 _MONGODB_PASSWD = 'xxxxxxxxxxxxxxxx'
@@ -186,7 +186,7 @@ DATASETS = ['ukbench', 'oxford5k', 'paris6k'] # the list of dataset you want to 
 ```
 
 说明：
-- `ALLOWED_HOSTS = ['*']` 将允许通过 `localhost` 和 `192.168.x.x` 访问该项目。
+- `ALLOWED_HOSTS = ['*']` 将允许通过 `localhost` 和 `192.168.x.x` 及端口号访问该项目。
 - `DEBUG=False` 设置为生产环境，否则为开发环境（危险）。 
 - `STATICFILES_DIRS` 和 `STATIC_ROOT` 的设置是为了让 Django 加载静态文件（css，js，images）；静态文件目录是`static/search_web`。
 
@@ -220,3 +220,5 @@ python manage.py runserver 0.0.0.0:8000
 ```
 
 此时要保证 MongoDB 服务是开启状态。
+
+访问 `http://192.168.x.x:8000/search_web/` 。
