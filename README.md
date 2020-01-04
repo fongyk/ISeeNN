@@ -13,6 +13,10 @@
 
 这里只使用一台服务器，不是上图的分布式架构。建议使用 [conda](https://conda.io/en/latest/) 配置环境。
 
+项目目录如下：
+
+<img src="img/tree.png" align="center" />
+
 ## 设置
 
 ### MongoDB 数据库
