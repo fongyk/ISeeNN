@@ -1,0 +1,8 @@
+/data4/fong/CBIR/search_engine/build/CMakeFiles/install/strip.dir
+/data4/fong/CBIR/search_engine/build/CMakeFiles/install/local.dir
+/data4/fong/CBIR/search_engine/build/CMakeFiles/test.dir
+/data4/fong/CBIR/search_engine/build/CMakeFiles/search_engine.dir
+/data4/fong/CBIR/search_engine/build/CMakeFiles/rebuild_cache.dir
+/data4/fong/CBIR/search_engine/build/CMakeFiles/edit_cache.dir
+/data4/fong/CBIR/search_engine/build/CMakeFiles/install.dir
+/data4/fong/CBIR/search_engine/build/CMakeFiles/list_install_components.dir

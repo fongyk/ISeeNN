@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+</head>
+    <title>ISEE NN</title>
+
+<style type="text/css">
+body {background-image: url("/static/search_web/images/ustc_crop.jpg"); background-repeat: no-repeat; background-size: cover;}
+</style>
+
+<body>
+
+<!-- <div align="center">
+{% load static %}
+<img src="{% static 'search_web/images/background.jpg' %}" alt="background" width="600" height="480"/>
+</div> -->
+
+<!-- <br>
+<br>
+<br>
+<br> -->
+
+<br>
+<br>
+<div style="width:100%;text-align:left">
+<form action="{% url 'search_web:upload' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" accept="image/jpg, image/jpeg, image/png" name="image_file" style="font-style:SimHei;font-size:30px;" />
+		<br>
+		<br>
+		<br>
+    <input type="submit" value="搜 索" style="font-style:SimHei;font-size:30px;" />
+</form>
+</div>
+
+</body>
+</html>
