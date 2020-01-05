@@ -13,7 +13,7 @@
 		letter-spacing: 1px;
 }
 
-#submit {
+.submit {
 		 color: #0B3861;
 		 font-size: 30px;
 		 font-family:"Times New Roman";
@@ -25,6 +25,10 @@
 		 padding: 0;
 		 background: rgba(135,206,250,0.2);
 }
+.submit:hover {
+	 opacity: 0.8;
+}
+
 
 .ui_button {
 		padding:15px;
