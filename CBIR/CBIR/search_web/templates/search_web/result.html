@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="icon" href="/static/search_web/images/favicon.ico" type="image/x-icon">
 	<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ISEE NN Results</title>
@@ -11,19 +12,37 @@
 </head>
 <body>
 
+<style>
+  .ui_button {
+      padding:15px;
+      background: #01AAED;
+      color: #fff;
+  }
+  .ui_button:hover {
+     opacity: 0.8;
+  }
+</style>
+
 {% if query_image %}
-<div style="width:100%;text-align:center">
+<br>
+<div style="width:100%;text-align:left">
 <form action="{% url 'search_web:upload' %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    <input type="file" name="image_file" accept="image/jpg, image/jpeg, image/png" style="font-style:SimHei;font-size:30px;background:rgba(0, 0, 0, 0);" />
-		&emsp;
-		<input type="submit" value="搜 索" style="font-style:SimHei;font-size:30px;background:rgba(0, 0, 0, 0);" />
+		<label class="ui_button" style="font-size:25px;" for="xFile">重新选择图片</label>
+    <input type="file" id="xFile" accept="image/jpg, image/jpeg, image/png" name="image_file" style="position:absolute;clip:rect(0 0 0 0);" />
+		<span></span>
+		<br>
+		<br>
+    <input type="submit" value="搜 索" style="font-size:25px;opacity:1;color:#FFF;background:#01AAED;width:180px;height:63px" />
 </form>
 </div>
 
 <br>
-<div id="showimg" align="center" style="font-size:20px">
-The Query You Uploaded: <br/>
+<div id="showimg" align="left" style="font-size:20px">
+The Query You Uploaded:
+</div>
+<br>
+<div align="left">
     {% if from_db %}
          <a href="{% url 'search_web:get_image' id=query_image %}" target="_blank">
             <img src="{% url 'search_web:get_thumbnail' id=query_image %}" alt="" height="200">
@@ -35,13 +54,13 @@ The Query You Uploaded: <br/>
     {% endif %}
 </div>
 <br>
-<div align="center" style="font-size:20px">
+<div align="left" style="font-size:20px">
     Query time: {{ time }}s.
     {% if re_rank is None %}
         {% if from_db %}
             <a href="{% url 'search_web:result_re_rank_from_db' id=query_image from_db='from_db' re_rank='re_rank' %}">Click</a> to re-rank.
         {% else %}
-            <a href="{% url 'search_web:result_re_rank' id=query_image re_rank='re_rank' %}">Click</a> to re-rank.
+            <a href="{% url 'search_web:result_re_rank' id=query_image re_rank='re_rank' %}">Re-rank</a>.
         {% endif %}
     {% endif %}
 </div>

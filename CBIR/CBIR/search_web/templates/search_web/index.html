@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 
+<link rel="icon" href="/static/search_web/images/favicon.ico" type="image/x-icon">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
 </head>
@@ -13,26 +15,23 @@ body {background-image: url("/static/search_web/images/ustc_crop.jpg"); backgrou
 
 <body>
 
-<!-- <div align="center">
+<div align="left">
 {% load static %}
-<img src="{% static 'search_web/images/background.jpg' %}" alt="background" width="600" height="480"/>
-</div> -->
+<img src="{% static 'search_web/images/iseenn.png' %}" width="800"/>
+</div>
 
-<!-- <br>
-<br>
-<br>
-<br> -->
-
-<br>
-<br>
 <div style="width:100%;text-align:left">
 <form action="{% url 'search_web:upload' %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    <input type="file" accept="image/jpg, image/jpeg, image/png" name="image_file" style="font-style:SimHei;font-size:30px;" />
+		&emsp;
+		&emsp;
+    <input type="file" accept="image/jpg, image/jpeg, image/png" name="image_file" style="font-style:SimHei;font-size:30px;opacity:0.8" />
 		<br>
 		<br>
 		<br>
-    <input type="submit" value="搜 索" style="font-style:SimHei;font-size:30px;" />
+		&emsp;
+		&emsp;
+    <input type="submit" value="搜 索" style="font-style:SimHei;font-size:30px;opacity:0.8" />
 </form>
 </div>
 

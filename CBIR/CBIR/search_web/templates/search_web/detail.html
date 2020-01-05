@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="/static/search_web/images/favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <title>ISee NN Detail</title>
     {% load static %}
@@ -21,7 +22,7 @@
     <p>Similarity Score = {{ similarity }}</p>
     <p><a href="{% url 'search_web:result_from_db' id=db_image.id from_db='from_db'%}">Click</a> to Search with this database image.</p>
     <p>
-        Info: width = {{ db_image.width }}, height = {{ db_image.height }}{% if db_image.source %}, Source = {{ db_image.source }}{% endif %}
+        Info: width = {{ db_image.width }}, height = {{ db_image.height }}{% if db_image.source %}, source = {{ db_image.source }}{% endif %}
     </p>
     <img src="{% url 'search_web:get_image' id=db_image.id %}" alt="">
 </div>
