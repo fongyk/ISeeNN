@@ -21,6 +21,7 @@
 		 width: 160px;
 		 height: 60px;
 		 border: none;
+		 border-radius: 8px;
 		 margin: 0;
 		 padding: 0;
 		 background: rgba(135,206,250,0.2);
@@ -34,6 +35,7 @@
 		padding:15px;
 		background: rgba(135,206,250,0.2);
 		color: #0B3861;
+		border-radius: 8px;
 		font-size: 30px;
 		font-family:"Times New Roman";
 }
