@@ -153,7 +153,7 @@ ALLOWED_HOSTS = ['*']
 TEMPLATES = [
     {
         ...
-        'DIRS': [os.path.join(BASE_DIR, 'search_web', 
+        'DIRS': [os.path.join(BASE_DIR, 'search_web', 'templates')],
         ...
     },
 ]
