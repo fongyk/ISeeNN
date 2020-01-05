@@ -11,3 +11,7 @@ a {
 a, a:visited {
 	color: blue;
 }
+
+body {
+    font-family:"Times New Roman"!important;
+}

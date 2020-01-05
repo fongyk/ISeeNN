@@ -15,27 +15,29 @@
 <style>
 .ui_button {
 		padding:15px;
-		background: #01AAED;
-		color: #fff;
+		background: rgba(135,206,250,0.2);
+		color: #0B3861;
+		font-size: 25px;
+		font-family: "Times New Roman";
 }
 .ui_button:hover {
 	 opacity: 0.8;
 }
 
 #footer {
-						height: 40px;
-						line-height: 40px;
-						position: fixed;
-						bottom: 0;
-						width: 100%;
-						text-align: center;
-						background: #333;
-						opacity: 0.6;
-						color: #fff;
-						font-family: Arial;
-						font-size: 12px;
-						letter-spacing: 1px;
-				}
+		height: 40px;
+		line-height: 40px;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+		background: #333;
+		opacity: 0.6;
+		color: #fff;
+		font-family: Arial;
+		font-size: 12px;
+		letter-spacing: 1px;
+}
 
 </style>
 
@@ -44,12 +46,12 @@
 <div style="width:100%;text-align:left">
 <form action="{% url 'search_web:upload' %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
-		<label class="ui_button" style="font-size:25px;" for="xFile">重新选择图片</label>
+		<label class="ui_button" for="xFile">Upload New Image</label>
     <input type="file" id="xFile" accept="image/jpg, image/jpeg, image/png" name="image_file" style="position:absolute;clip:rect(0 0 0 0);" />
 		<span></span>
 		<br>
 		<br>
-    <input type="submit" value="搜 索" style="font-size:25px;opacity:1;color:#FFF;background:#01AAED;width:180px;height:63px" />
+    <input type="submit" value="Search" style="font-size:25px;font-family:'Times New Roman';opacity:1;color:#0B3861;background:rgba(135,206,250,0.2);border:none;width:180px;height:63px" />
 </form>
 </div>
 

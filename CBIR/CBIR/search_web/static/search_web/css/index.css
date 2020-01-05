@@ -1,14 +1,38 @@
 #footer {
-						height: 40px;
-						line-height: 40px;
-						position: fixed;
-						bottom: 0;
-						width: 100%;
-						text-align: center;
-						background: #333;
-						opacity: 0.8;
-						color: #fff;
-						font-family: Arial;
-						font-size: 12px;
-						letter-spacing: 1px;
-				}
+		height: 40px;
+		line-height: 40px;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+		background: #333;
+		opacity: 0.8;
+		color: #fff;
+		font-family: Arial;
+		font-size: 12px;
+		letter-spacing: 1px;
+}
+
+#submit {
+		 color: #0B3861;
+		 font-size: 30px;
+		 font-family:"Times New Roman";
+		 opacity: 1.0;
+		 width: 160px;
+		 height: 60px;
+		 border: none;
+		 margin: 0;
+		 padding: 0;
+		 background: rgba(135,206,250,0.2);
+}
+
+.ui_button {
+		padding:15px;
+		background: rgba(135,206,250,0.2);
+		color: #0B3861;
+		font-size: 30px;
+		font-family:"Times New Roman";
+}
+.ui_button:hover {
+	 opacity: 0.8;
+}
