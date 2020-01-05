@@ -6,14 +6,16 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
-</head>
-    <title>ISEE NN</title>
+
+<title>ISEE NN</title>
+
+{% load static %}
+<link rel="stylesheet" href="{% static "search_web/css/index.css" %}" />
 
 <style type="text/css">
 body {background-image: url("/static/search_web/images/ustc_crop.jpg"); background-repeat: no-repeat; background-size: cover;}
 </style>
-
-<body>
+</head>
 
 <div align="left">
 {% load static %}
@@ -34,6 +36,8 @@ body {background-image: url("/static/search_web/images/ustc_crop.jpg"); backgrou
     <input type="submit" value="搜 索" style="font-style:SimHei;font-size:30px;opacity:0.8" />
 </form>
 </div>
+
+<div id="footer">ISeeNN@MCC.Lab, USTC, 2020 </div>
 
 </body>
 </html>

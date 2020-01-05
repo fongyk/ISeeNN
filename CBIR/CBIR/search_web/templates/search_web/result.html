@@ -13,14 +13,30 @@
 <body>
 
 <style>
-  .ui_button {
-      padding:15px;
-      background: #01AAED;
-      color: #fff;
-  }
-  .ui_button:hover {
-     opacity: 0.8;
-  }
+.ui_button {
+		padding:15px;
+		background: #01AAED;
+		color: #fff;
+}
+.ui_button:hover {
+	 opacity: 0.8;
+}
+
+#footer {
+						height: 40px;
+						line-height: 40px;
+						position: fixed;
+						bottom: 0;
+						width: 100%;
+						text-align: center;
+						background: #333;
+						opacity: 0.6;
+						color: #fff;
+						font-family: Arial;
+						font-size: 12px;
+						letter-spacing: 1px;
+				}
+
 </style>
 
 {% if query_image %}
@@ -83,5 +99,6 @@ The Query You Uploaded:
 </div>
 {% endif %}
 
+<div id="footer">ISeeNN@MCC.Lab, USTC, 2020 </div>
 </body>
 </html>
