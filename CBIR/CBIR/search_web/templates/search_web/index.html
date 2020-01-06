@@ -1,47 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+	<head>
+		<link rel="icon" href="/static/search_web/images/favicon.ico" type="image/x-icon">
 
-<link rel="icon" href="/static/search_web/images/favicon.ico" type="image/x-icon">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+			<meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="UTF-8">
+		<title>ISEE NN</title>
 
-<title>ISEE NN</title>
+		{% load static %}
+		<link rel="stylesheet" href="{% static "search_web/css/index.css" %}" />
+	</head>
 
-{% load static %}
-<link rel="stylesheet" href="{% static "search_web/css/index.css" %}" />
+	<body>
+		<div class="content">
 
-<style type="text/css">
-body {background-image: url("/static/search_web/images/ustc_crop.jpg"); background-repeat: no-repeat; background-size: cover;}
-</style>
-</head>
+			<img src="/static/search_web/images/background.jpg" id="fullscreen" />
 
-<body>
+			<img src="/static/search_web/images/iseenn3.png" id="avatar" />
 
-<div align="left">
-{% load static %}
-<img src="{% static 'search_web/images/iseenn.png' %}" width="800"/>
-</div>
+			<div style="width:100%">
+			<form action="{% url 'search_web:upload' %}" method="post" enctype="multipart/form-data">
+			    {% csrf_token %}
+					<label class="ui_button" for="xFile">Upload Image</label>
+			    <input type="file" id="xFile" accept="image/jpg, image/jpeg, image/png" name="image_file" style="position:absolute;clip:rect(0 0 0 0);" />
+					<span></span>
+					&emsp;
+					&emsp;
+			    <input type="submit" value="Search" class="submit" />
+			</form>
+			</div>
 
-<div style="width:100%;text-align:left">
-<form action="{% url 'search_web:upload' %}" method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-		&emsp;
-		&emsp;
-		<label class="ui_button" for="xFile">Upload Image</label>
-    <input type="file" id="xFile" accept="image/jpg, image/jpeg, image/png" name="image_file" style="position:absolute;clip:rect(0 0 0 0);" />
-		<span></span>
-		<br>
-		<br>
-		<br>
-		&emsp;
-		&emsp;
-    <input type="submit" value="Search" class="submit" />
-</form>
-</div>
+			<div id="footer">ISeeNN@MCC.Lab, USTC, 2020 </div>
 
-<div id="footer">ISeeNN@MCC.Lab, USTC, 2020 </div>
-
-</body>
+		</div>
+	</body>
 </html>

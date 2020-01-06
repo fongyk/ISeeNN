@@ -1,8 +1,52 @@
+body {
+    font-family: "Times New Roman";
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0;
+}
+
+#fullscreen {
+    z-index: -999;
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#avatar {
+    height: 300px;
+		width: 300px;
+    border-radius: 100%;
+    border: 5px solid white;
+    margin-bottom: 40px;
+		background: rgba(135,206,250,0.2);
+}
+/* #avatar {
+    height: 200px;
+		width: 200px;
+    border-radius: 100%;
+    border: 5px solid white;
+    margin-bottom: 40px;
+		background: rgba(135,206,250,0.2);
+		font-size: 50px;
+		color:#0B3861;
+		position: fixed;
+		left:50%;
+		margin-left: -105px;
+} */
+
 #footer {
 		height: 40px;
 		line-height: 40px;
 		position: fixed;
 		bottom: 0;
+		left: 0;
 		width: 100%;
 		text-align: center;
 		background: #333;
@@ -14,14 +58,14 @@
 }
 
 .submit {
-		 color: #0B3861;
+		 color: #FFF;
 		 font-size: 30px;
 		 font-family:"Times New Roman";
 		 opacity: 1.0;
 		 width: 160px;
-		 height: 60px;
+		 height: 63px;
 		 border: none;
-		 border-radius: 8px;
+		 border-radius: 15px;
 		 margin: 0;
 		 padding: 0;
 		 background: rgba(135,206,250,0.2);
@@ -34,11 +78,18 @@
 .ui_button {
 		padding:15px;
 		background: rgba(135,206,250,0.2);
-		color: #0B3861;
-		border-radius: 8px;
+		color: #FFF;
+		border-radius: 15px;
 		font-size: 30px;
 		font-family:"Times New Roman";
 }
 .ui_button:hover {
 	 opacity: 0.8;
+}
+
+.content {
+    padding-top: 100px;
+    padding-bottom: 60px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
